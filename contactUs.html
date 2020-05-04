@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="stylesheet.css" rel="Stylesheet" type="text/css" /> 
+	<title>Contact Us</title>
+	
+	<style>
+		.hidden{
+			display: none;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function showHide() {
+			var checkbox = document.getElementById("chk");
+			var hiddenfields = document.getElementsByClassName("hidden");
+		
+		for(var i = 0; i != hiddenfields.length; i++) {
+			if(checkbox.checked){
+				hiddenfields[i].style.display = "block";
+			}
+			else{
+				hiddenfields[i].style.display = "none";
+			}
+		}
+	}
+
+	</script>
+</head>
+
+<body>
+<nav class="nav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="contactUs.html">Contact Us</a></li>
+	<li><a href="suggestions.html">Product Suggestions</a></li>
+	</ul>
+</nav>
+	<h1>Contact Us</h1>
+	<h4>Want to help make us better? Give us feedback below.</h4>
+	<form action="#">
+		
+		<input type="checkbox" name="ckhbox" id="chk" onclick="showHide ()" />
+		<label for="chk">Click to show form</label>
+		<fieldset class="hidden">
+		<br/>
+		<label class="hidden">Name:</label><input type="text" name="name" required class="hidden" />
+		<br/>
+		<label class="hidden">Email:</label><input type="email" name="email" required class="hidden" />
+		<br/>
+		<p class= "hidden">Select from options below.</p>
+		<br/>
+	<label for="contactReason" class="hidden">Options:</label>
+
+		<select id="Reason" class="hidden">
+		  <option value="orders">Order Questions</option>
+		  <option value="webFeedback">Website Feedback</option>
+		</select> 
+	<br/>
+	<label class="hidden">Feedback:</label><textarea name="feedback" required class="hidden"></textarea>
+	<br/>
+	 <input type="submit" value="Submit" class="hidden">
+	<p>Can't find what you are looking for? Click the link below</p>
+	<br/>
+	 <button><a href="suggestions.html">Product Suggestions</a></button> 
+   </fieldset>
+	</form>
+	
+
+ 
+
+
+
+
+
+
+
+</body>

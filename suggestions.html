@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="stylesheet.css" rel="Stylesheet" type="text/css" /> 
+	<title>Product Suggestion</title>
+	
+	<style>
+		.hidden{
+			display: none;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function showHide() {
+			var checkbox = document.getElementById("chk");
+			var hiddenfields = document.getElementsByClassName("hidden");
+		
+		for(var i = 0; i != hiddenfields.length; i++) {
+			if(checkbox.checked){
+				hiddenfields[i].style.display = "block";
+			}
+			else{
+				hiddenfields[i].style.display = "none";
+			}
+		}
+	}
+	</script>
+</head>
+
+<body>
+
+<nav class="nav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="contactUs.html">Contact Us</a></li>
+	<li><a href="suggestions.html">Product Suggestions</a></li>
+	</ul>
+</nav>
+	<h1>New Product Ideas</h1>
+	<h4>Can't find what you are looking for? Suggest item below.</h4>
+	
+	<form action="#">
+		
+			<input type="checkbox" name="ckhbox" id="chk" onclick="showHide ()" />
+			<label for="chk">Click to show form</label>
+		<fieldset class="hidden">
+			<br/>
+			<label class="hidden">Name:</label><input type="text" name="name" required class="hidden" />
+			<br/>
+			<label class="hidden">Email:</label><input type="email" name="email" required class="hidden" />
+			<br/>
+			<label class="hidden">Product Description:</label><textarea name="discription" required class="hidden"></textarea>
+			<br/>
+			<input type="submit" value="Submit" class="hidden">
+		</fieldset>
+	</form>
+	
+
+
+
+
+
+
+
+
+
+</body>
